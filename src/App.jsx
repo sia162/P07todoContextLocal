@@ -19,7 +19,7 @@ function App() {
     setTodos((prev) => prev.filter((prevTodo) => prevTodo.id !== id));
   };
 
-  const toggleTodo = (id) => {
+  const toggleComplete = (id) => {
     setTodos((prev) =>
       prev.map((prevTodo) =>
         prevTodo === id
@@ -43,7 +43,7 @@ function App() {
 
   return (
     <TodoProvider
-      value={{ todos, addTodo, deleteTodo, updateTodo, toggleTodo }}
+      value={{ todos, addTodo, deleteTodo, updateTodo, toggleComplete }}
     >
       <div className="bg-[#172842] min-h-screen py-8">
         <div className="w-full max-w-2xl mx-auto shadow-md rounded-lg px-4 py-3 text-white">
